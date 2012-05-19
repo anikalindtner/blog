@@ -1,20 +1,12 @@
-
-
-
-
-
 <% @posts.each do |post| %>
-  
-    <h2><%= post.title %></h2>
-    <%= simple_format post.body %>
-    <p>
-      <%= link_to 'Show', post %>
-      <%= link_to 'Edit', edit_post_path(post) %>
-      <%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %>
-    </p>  
+  <h2><%= post.title %></h2>
+  <%= simple_format post.body %>
+  <p>
+    <%= link_to 'Show', post %>
+    <%= link_to 'Edit', edit_post_path(post) %>
+    <%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %>
+  </p>  
 <% end %>
-
-
-<br />
-
-<%= link_to 'New Post', new_post_path %>
+<p>
+  <%= link_to 'New Post', new_post_path %>
+</p>
